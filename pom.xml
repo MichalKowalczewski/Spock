@@ -23,16 +23,6 @@
                 </executions>
             </plugin>
             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.18.1</version>
-                <configuration>
-                    <useFile>false</useFile>
-                    <includes>
-                        <include>**/*Spec.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -44,12 +34,14 @@
     </build>
 
     <dependencies>
+        <!--Spock Core -->
         <dependency>
             <groupId>org.spockframework</groupId>
             <artifactId>spock-core</artifactId>
             <version>1.3-groovy-2.5</version>
             <scope>test</scope>
         </dependency>
+        <!-- Biblioteczka do raportów Spockowych + slf4j bo biblioteka tego wymaga -->
         <dependency>
             <groupId>com.athaydes</groupId>
             <artifactId>spock-reports</artifactId>
@@ -67,6 +59,8 @@
             <version>1.7.30</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Lombok dla wygody -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

@@ -21,6 +21,7 @@ public class Student {
         this.studentGrades = studentGrades;
     }
 
+    //Test nr #1
     public String getStudentFullName(){
         return studentFirstName + " " + studentLastName;
     }
